@@ -4,6 +4,7 @@
   "description": "BookStore",
   "main": "src/index.ts",
   "scripts": {
+    "build": "tsc -p ./tsconfig.json",
     "watch": "tsc -p ./tsconfig.json --watch --pretty",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
