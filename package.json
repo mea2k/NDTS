@@ -1,0 +1,19 @@
+{
+  "name": "bookstor-ts",
+  "version": "1.0.0",
+  "description": "BookStore",
+  "main": "src/index.ts",
+  "scripts": {
+    "watch": "tsc -p ./tsconfig.json --watch --pretty",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eugene",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "sonarjs": "^1.0.0",
+    "typescript": "^5.1.6"
+  }
+}
