@@ -1,0 +1,46 @@
+{
+  "dependencies": {
+    "build": "^0.1.4",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "xhr": "^2.6.0",
+    "xhr2": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.4.6",
+    "nodemon": "^3.0.1",
+    "source-map-support": "^0.5.21",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.6"
+  },
+  "name": "rxjs",
+  "description": "[https://github.com/netology-code/ndtnf-homeworks/tree/master/009-rxjs](https://github.com/netology-code/ndtnf-homeworks/tree/master/009-rxjs)",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc -p ./tsconfig.json --pretty",
+    "watch": "nodemon --ext ts --exec \"tsc && node dist/index.js\"",
+    "watch2": "tsc -w & nodemon dist/index.js",
+    "watch_old": "nodemon --ignore ./data/ -e src/ --exec \"npm run start\" --verbose -e ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mea2k/NDTS.git#main"
+  },
+  "keywords": [
+    "RxJs",
+    "typescript",
+    "pipe"
+  ],
+  "author": "Eugene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mea2k/NDTS/issues"
+  },
+  "homepage": "https://github.com/mea2k/NDTS/tree/main#readme"
+}
