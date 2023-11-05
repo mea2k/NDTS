@@ -1,0 +1,51 @@
+# примеры API-запросов
+
+@baseUrl = http://localhost:3000/api
+
+# Создание пользователя
+POST {{baseUrl}}/users/signup
+Content-Type: application/json
+
+{
+  "login": "userXX",
+  "email": "email@11.rr",
+  "firstName": "User",
+  "password1": "123",
+  "password2": "123"
+}
+
+###
+
+# Получение информации о пользователе
+GET {{baseUrl}}/users/3
+Content-Type: application/json
+
+###
+
+# Аутентификация
+POST {{baseUrl}}/users/signin
+Content-Type: application/json
+
+{
+  "login": "userXX",
+  "password": "123"
+}
+
+###
+
+# Получение токена при аутентификации
+POST {{baseUrl}}/users/token
+Content-Type: application/json
+
+{
+  "login": "userXX",
+  "password": "123"
+}
+
+###
+
+# Профиль пользователя 
+# (доступен только после аутентификации - по токену)
+GET {{baseUrl}}/users/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsicGFzc3dvcmQiOiJpbml0IiwibG9naW4iOiJpbml0IiwiZW1haWwiOiJpbml0IiwiX2lkIjoiaW5pdCIsImZpcnN0TmFtZSI6ImluaXQiLCJfX3YiOiJpbml0In0sInN0YXRlcyI6eyJyZXF1aXJlIjp7fSwiaW5pdCI6eyJfaWQiOnRydWUsImVtYWlsIjp0cnVlLCJsb2dpbiI6dHJ1ZSwiZmlyc3ROYW1lIjp0cnVlLCJwYXNzd29yZCI6dHJ1ZSwiX192Ijp0cnVlfX19LCJza2lwSWQiOnRydWV9LCIkaXNOZXciOmZhbHNlLCJfZG9jIjp7Il9pZCI6MywiZW1haWwiOiJlbWFpbEAxMS5yciIsImxvZ2luIjoidXNlclhYIiwiZmlyc3ROYW1lIjoiVXNlciIsInBhc3N3b3JkIjoiMTIzIiwiX192IjowfSwiaWF0IjoxNjk5MTM5NjU2LCJleHAiOjE2OTkxMzk3NzZ9.UNar5PDsBQS9cv13vLfyxKigHFSV4ZQlODBxay-u6pI
